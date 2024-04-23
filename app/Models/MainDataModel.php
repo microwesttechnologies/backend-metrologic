@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MainData extends Model
+class MainDataModel extends Model
 {
     protected $table = 'main_data';
     protected $primaryKey = 'id';

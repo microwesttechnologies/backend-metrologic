@@ -2,29 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MainData;
+use App\Http\Controllers\Controller;
+use App\Models\MetadataModel;
 use Illuminate\Http\Request;
-use App\Models\Metadata;
 
-class APIController extends Controller
+class MetaDataController extends Controller
 {
     public function getAllMetadata(Request $request)
     {
-        $metadata = Metadata::all();
+        $metadata = MetadataModel::all();
 
         return response()->json($metadata); 
     }
-
-    public function getAllMaindata(Request $request)
-    {
-        $maindata = MainData::all();
-
-        return response()->json($maindata); 
-    }
-
     public function getMetadataById(Request $request, $id)
     {
-        $metadata = Metadata::find($id);
+        $metadata = MetadataModel::find($id);
 
         if (!$metadata) {
             return response()->json(['error' => 'Metadata not found'], 404);
