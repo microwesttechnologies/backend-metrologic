@@ -12,6 +12,6 @@ Route::get('/maindata/{id}',    [MainDataController         ::class, 'getMainDat
 Route::get('/wind',             [WindController             ::class, 'getAllWind']);
 Route::get('/wind/{id}',        [WindController             ::class, 'getWindById']);
 Route::get('/coordinates',      [CoordinatesController      ::class, 'getAllCoordinates']);
-Route::get('/coordinates/{id}', [CoordinatesController      ::class, 'getCoordinatesById']);
+Route::get('/coordinates/{id}', [CoordinatesController      ::class, 'getCoordinateById']);
 
 
