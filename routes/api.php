@@ -5,6 +5,7 @@ use App\Http\Controllers\DataPrimaryController;
 use App\Http\Controllers\MainDataController;
 use App\Http\Controllers\MetaDataController;
 use App\Http\Controllers\WindController;
+use App\Http\Controllers\DataController;
 
 Route::get('/metadata',                         [MetaDataController         ::class, 'getAllMetadata']);
 Route::get('/metadata/{id}',                    [MetaDataController         ::class, 'getMetadataById']);
@@ -17,6 +18,7 @@ Route::get('/coordinates/{id}',                 [CoordinatesController      ::cl
 Route::get('/dataprimary',                      [DataPrimaryController      ::class, 'getAllDataPrimary']);
 Route::get('/dataprimary/{id}',                 [DataPrimaryController      ::class, 'getDataPrimaryById']);
 Route::get('/dataprimarybydate/{dateSending}',  [DataPrimaryController      ::class, 'getDataPrimaryByDate']);
+Route::get('/data/{lat}/{lon}',                 [DataController             ::class, 'getData']);
 
 
 
